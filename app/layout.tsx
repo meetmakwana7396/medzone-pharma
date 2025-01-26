@@ -2,6 +2,10 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat, Open_Sans } from "next/font/google";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
