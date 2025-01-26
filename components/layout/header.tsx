@@ -70,10 +70,18 @@ const Header = () => {
                 </li>
                 <li>
                   <a
-                    href="#services"
+                    href="#category"
                     className="text-black hover:text-black/80"
                   >
-                    Services
+                    Category
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#products"
+                    className="text-black hover:text-black/80"
+                  >
+                    Products
                   </a>
                 </li>
                 <li>

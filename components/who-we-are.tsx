@@ -1,5 +1,7 @@
 import { HeartPulse, Microscope, ShieldCheck, Trophy } from "lucide-react";
 import React from "react";
+import { BsAirplane, BsCashCoin, BsHeadphones, BsPeople } from "react-icons/bs";
+import "@/components/custom/feature-hover-card.css";
 
 const WhoWeAre = () => {
   return (
@@ -71,39 +73,42 @@ const WhoWeAre = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-6 mt-8">
+        <div className="grid grid-cols-4 mt-20 gap-4">
           {[
             {
-              icon: <Microscope className="h-8 w-8 text-blue-600" />,
+              icon: BsAirplane,
               title: "Research",
               description: "Advanced Research Facilities",
             },
             {
-              icon: <HeartPulse className="h-8 w-8 text-blue-600" />,
+              icon: BsPeople,
               title: "Healthcare",
               description: "Quality Patient Care",
             },
             {
-              icon: <ShieldCheck className="h-8 w-8 text-blue-600" />,
+              icon: BsCashCoin,
               title: "Safety",
               description: "Rigorous Quality Control",
             },
             {
-              icon: <Trophy className="h-8 w-8 text-blue-600" />,
+              icon: BsHeadphones,
               title: "Excellence",
               description: "Industry Recognition",
             },
           ].map((service, index) => (
             <div
               key={index}
-              className="text-center p-4 bg-white rounded-lg shadow-sm"
+              className="text-left text-black p-10 bg-white hover:-translate-y-5 hover:text-white transition duration-300 hover:bg-gradient-to-tl hover:from-blue-600 hover:via-blue-500 hover:to-blue-400 group cursor-default border"  
             >
-              <div className="flex justify-center mb-4">{service.icon}</div>
-              <h3 className="font-semibold mb-2">{service.title}</h3>
-              <p className="text-sm text-gray-600">{service.description}</p>
+              <div className="flex justify-center items-center group-hover:bg-blue-800 group-hover:text-white mb-8 p-4 rounded-full w-fit bg-blue-300">
+                <service.icon className="h-10 w-10" />
+              </div>
+              <h3 className="font-semibold text-xl mb-2">{service.title}</h3>
+              <p className="text-lg">{service.description}</p>
             </div>
           ))}
         </div>
+        {/* <FeatureHoverCard /> */}
       </div>
     </section>
   );
