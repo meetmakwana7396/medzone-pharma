@@ -98,9 +98,9 @@ const WhoWeAre = () => {
           ].map((service, index) => (
             <div
               key={index}
-              className="text-left text-black p-10 bg-white hover:-translate-y-5 hover:text-white transition duration-300 hover:bg-gradient-to-tl hover:from-blue-600 hover:via-blue-500 hover:to-blue-400 group cursor-default border"  
+              className="text-left text-black p-10 bg-white hover:shadow-lg transition-all duration-300 cursor-default border"  
             >
-              <div className="flex justify-center items-center group-hover:bg-blue-800 group-hover:text-white mb-8 p-4 rounded-full w-fit bg-blue-300">
+              <div className="flex justify-center items-center mb-8 p-4 rounded-full w-fit bg-blue-300">
                 <service.icon className="h-10 w-10" />
               </div>
               <h3 className="font-semibold text-xl mb-2">{service.title}</h3>
