@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <>
       {" "}
-      <div className="top-0 w-full text-white bg-blue-500">
+      {/* <div className="top-0 w-full text-white bg-blue-500">
         <div className="container flex justify-between">
           <div className="divide-x flex divide-white/20">
             <button className="flex gap-2 font-semibold items-center py-2 px-4 bg-blue-800 hover:bg-blue-700">
@@ -39,7 +39,7 @@ const Header = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Header */}
       <header className="sticky top-0 left-0 right-0 z-50 bg-white shadow-md">
         <div className="container">
@@ -51,10 +51,44 @@ const Header = () => {
                 width={200}
                 height={156}
               />
-              {/* <Flask className="h-8 w-8 text-blue-600" />
-          <span className="text-2xl font-bold text-white">
-            PharmaCare
-          </span> */}
+              <nav>
+                <ul className="flex space-x-8">
+                  <li>
+                    <a href="#home" className="text-black hover:text-black/80">
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#about" className="text-black hover:text-black/80">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#category"
+                      className="text-black hover:text-black/80"
+                    >
+                      Category
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#products"
+                      className="text-black hover:text-black/80"
+                    >
+                      Products
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#contact"
+                      className="text-black hover:text-black/80"
+                    >
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </nav>  
             </div>
             <nav>
               <ul className="flex space-x-8">

@@ -37,13 +37,13 @@ const WhyChooseUs = () => {
           ].map((feature, index) => (
             <Card
               key={index}
-              className="p-10 text-left h-[400px] border justify-between  group ring-2 ring-blue-600 ring-offset-2 transition-colors duration-300"
+              className="p-10 text-left justify-between border-none shadow-none"
             >
-              <div className="h-full flex flex-col">
+              <div className="h-full flex flex-col gap-4">
                 <div>
                   <feature.icon className="w-12 h-12" />
                 </div>
-                <div className="flex flex-col justify-end align-bottom mt-auto">
+                <div className="flex flex-col gap-4">
                   <h3 className="text-2xl font-semibold">{feature.title}</h3>
                   <p className="text-gray-600 text-lg">{feature.description}</p>
                 </div>

@@ -20,20 +20,18 @@ const Hero = () => {
         autoplay={{ delay: 5000 }}
         speed={1000}
         loop
-        className="h-[calc(100vh-120px)]"
+        className="h-[calc(100vh-80px)]"
         onSlideChange={() => setSlideCount((prev) => prev + 1)}
       >
         {[
           {
-            image:
-              "https://ik.imagekit.io/bfcpik1xc/carousel-1.jpg?updatedAt=1710322099198",
+            image: "/images/hero1.jpg",
             title: "Your Partner in Wellness",
             description:
               "MedZone Pharma specializes in the trading of pharmaceutical products, catering to diverse medical needs globally. We ensure the highest standards of quality and reliability, forging partnerships to deliver essential medications worldwide, fostering healthier communities through accessible healthcare solutions.",
           },
           {
-            image:
-              "https://ik.imagekit.io/bfcpik1xc/carousel-2.jpg?updatedAt=1710322098972",
+            image: "/images/hero2.jpg",
             title: "Globally Connected. Locally Invested",
             description:
               "At MedZone Pharma, we don't just see ourselves as a pharmaceutical company; we're architects of hope, designing pathways to wellness",
