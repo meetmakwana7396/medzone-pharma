@@ -7,41 +7,42 @@ import { BsBuilding, BsCart2, BsGlobe, BsHeartPulse } from "react-icons/bs";
 const WhyChooseUs = () => {
   return (
     <section className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container">
         <h2 className="text-4xl font-bold text-center mb-12">Why Choose Us</h2>
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {[
             {
               icon: BsHeartPulse,
-              title: "State-of-the-art Facilities",
+              title: "Quality Assurance",
               description:
-                "Modern laboratories and research centers equipped with the latest technology",
+                "Following strict regulatory guidelines to deliver safe and effective pharmaceutical products.",
             },
             {
               icon: BsGlobe,
-              title: "Expert Team",
+              title: "Global Reach",
               description:
-                "Highly qualified professionals dedicated to healthcare excellence",
+                "Our extensive partner network enables seamless distribution to clients across all regions.",
             },
             {
               icon: BsBuilding,
-              title: "24/7 Support",
+              title: "Industry Expertise",
               description:
-                "Round-the-clock assistance for all your healthcare needs",
+                "With 10+ years of experience and expertise in the pharmaceutical industry",
             },
             {
               icon: BsCart2,
-              title: "Comprehensive Care",
-              description: "Complete healthcare solutions under one roof",
+              title: "Flexible Ordering Options",
+              description:
+                "Customized ordering solutions designed to meet each client's unique business requirements.",
             },
           ].map((feature, index) => (
             <Card
               key={index}
-              className="p-10 text-left justify-between border-none shadow-none"
+              className="p-10 text-left justify-between border border-neutral-500 shadow ring-blue-800 ring-2 ring-offset-4"
             >
               <div className="h-full flex flex-col gap-4">
                 <div>
-                  <feature.icon className="w-12 h-12" />
+                  <feature.icon className="w-12 h-12 text-blue-800" />
                 </div>
                 <div className="flex flex-col gap-4">
                   <h3 className="text-2xl font-semibold">{feature.title}</h3>

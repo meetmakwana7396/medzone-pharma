@@ -1,7 +1,17 @@
 import { HeartPulse, Microscope, ShieldCheck, Trophy } from "lucide-react";
+import CountUp from "react-countup";
 import React from "react";
-import { BsAirplane, BsCashCoin, BsHeadphones, BsPeople } from "react-icons/bs";
+import {
+  BsAirplane,
+  BsBox2,
+  BsCashCoin,
+  BsGlobe,
+  BsHeadphones,
+  BsPeople,
+  BsTrophy,
+} from "react-icons/bs";
 import "@/components/custom/feature-hover-card.css";
+import { Button } from "./ui/button";
 
 const WhoWeAre = () => {
   return (
@@ -9,11 +19,7 @@ const WhoWeAre = () => {
       <div className="container ">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div className="relative">
-            <img
-              src="/images/who-we-are.png"
-              alt="Laboratory"
-              className="rounded-lg"
-            />
+            <img src="/images/who-we-are.jpg" alt="Laboratory" />
             {/* <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-lg">
               <p className="text-4xl font-bold">25+</p>
               <p>Years of Excellence</p>
@@ -21,7 +27,7 @@ const WhoWeAre = () => {
           </div>
           <div>
             <h2 className="text-4xl font-bold mb-6">Who We Are?</h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 text-xl mb-6">
               We are a dynamic pharmaceutical and surgical products trading
               company dedicated to providing high-quality medical solutions to
               meet the diverse needs of healthcare professionals and
@@ -32,76 +38,72 @@ const WhoWeAre = () => {
               latest advancements in the industry, ensuring that we offer a
               comprehensive range of reliable and cost-effective solutions.
             </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 justify-center">
-              {/* Circle 1 */}
-              <div className="sm:justify-self-end">
-                <div className="w-56 h-56 flex flex-col items-center justify-center rounded-full bg-blue-500 text-center">
-                  <p className="text-white mb-0">Products</p>
-                  <h1
-                    className="text-white text-4xl font-bold"
-                    data-toggle="counter-up"
-                  >
-                    548
-                  </h1>
-                </div>
-              </div>
-              {/* Circle 2 */}
-              <div className="sm:justify-self-start">
-                <div className="w-56 h-56 flex flex-col items-center justify-center rounded-full bg-gray-400 text-center">
-                  <p className="text-white mb-0">Countries</p>
-                  <h1
-                    className="text-white text-4xl font-bold"
-                    data-toggle="counter-up"
-                  >
-                    8
-                  </h1>
-                </div>
-              </div>
-              {/* Circle 3 */}
-              <div className="sm:col-span-2 sm:flex sm:justify-center">
-                <div className="w-56 h-56 flex flex-col items-center justify-center rounded-full bg-blue-900 text-center -mt-32 sm:-mt-32">
-                  <p className="text-white mb-0">Happy Clients</p>
-                  <h1
-                    className="text-white text-4xl font-bold"
-                    data-toggle="counter-up"
-                  >
-                    268
-                  </h1>
-                </div>
-              </div>
+            <div className="space-x-4">
+              <Button size={"lg"} className="font-semibold">
+                Contact us
+              </Button>
+              <Button
+                size={"lg"}
+                variant={"secondary"}
+                className="font-semibold"
+              >
+                Services
+              </Button>
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-4 mt-20 gap-4">
+        <div className="grid grid-cols-4 mt-20 bg-blue-100 p-4 py-8 divide-x-2 divide-blue-800/50 shadow-lg">
           {[
             {
-              icon: BsAirplane,
-              title: "Research",
+              icon: BsTrophy,
+              statStart: 5,
+              statEnd: 10,
+              title: "Years Experience",
               description: "Advanced Research Facilities",
             },
             {
-              icon: BsPeople,
-              title: "Healthcare",
+              icon: BsBox2,
+              statStart: 448,
+              statEnd: 548,
+              title: "Products",
               description: "Quality Patient Care",
             },
             {
-              icon: BsCashCoin,
-              title: "Safety",
+              icon: BsPeople,
+              statStart: 168,
+              statEnd: 268,
+              title: "Happy Clients",
               description: "Rigorous Quality Control",
             },
             {
-              icon: BsHeadphones,
-              title: "Excellence",
+              icon: BsGlobe,
+              statStart: 4,
+              statEnd: 8,
+              title: "Countries",
               description: "Industry Recognition",
             },
           ].map((service, index) => (
             <div
               key={index}
-              className="text-left text-black p-10 bg-white hover:shadow-lg transition-all duration-300 cursor-default border"  
+              className="text-left text-black px-8 transition-all duration-300 cursor-default"
             >
-              <div className="flex justify-center items-center mb-8 p-4 rounded-full w-fit bg-blue-300">
-                <service.icon className="h-10 w-10" />
+              <div className="flex justify-center items-center text-4xl font-bold mb-4 rounded-full w-fit">
+                {/* <service.icon className="h-10 w-10" /> */}
+                <CountUp
+                  start={service.statStart}
+                  end={service.statEnd}
+                  duration={5}
+                  enableScrollSpy
+                  scrollSpyDelay={500}
+                  separator=" "
+                  //   decimals={4}
+                  decimal=","
+                  //   prefix="+"
+                  suffix="+"
+                  //   onEnd={() => console.log("Ended! 👏")}
+                  //   onStart={() => console.log("Started! 💨")}
+                  className="font-bold text-4xl text-blue-800 flex w-fit mx-auto"
+                />
               </div>
               <h3 className="font-semibold text-xl mb-2">{service.title}</h3>
               <p className="text-lg">{service.description}</p>

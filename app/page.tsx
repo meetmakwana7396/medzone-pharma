@@ -41,8 +41,8 @@ export default function Home() {
       <Hero />
       <WhoWeAre />
       <WhyChooseUs />
-      <Enquiry />
       <Testimonials />
+      <Enquiry />
       <Footer />
     </main>
   );

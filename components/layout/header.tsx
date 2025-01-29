@@ -6,129 +6,119 @@ import {
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, PhoneCall } from "lucide-react";
+import { Button } from "../ui/button";
+import { Separator } from "../ui/separator";
+import Link from "next/link";
 
 const Header = () => {
   return (
-    <>
-      {" "}
-      {/* <div className="top-0 w-full text-white bg-blue-500">
-        <div className="container flex justify-between">
-          <div className="divide-x flex divide-white/20">
-            <button className="flex gap-2 font-semibold items-center py-2 px-4 bg-blue-800 hover:bg-blue-700">
-              <Phone className="h-6 w-6" />
-              +91 84011 07297
-            </button>
-            <button className="flex gap-2 font-semibold items-center py-2 px-4 bg-blue-800 hover:bg-blue-700">
-              <Mail className="h-6 w-6" />
-              info@medzonepharmagroup.com
-            </button>
-          </div>
-          <div className="divide-x flex divide-white/20">
-            <button className="flex gap-2 font-semibold items-center px-3 bg-blue-800 hover:bg-blue-700">
-              <FaFacebookF className="size-4" />
-            </button>
-            <button className="flex gap-2 font-semibold items-center px-3 bg-blue-800 hover:bg-blue-700">
-              <FaXTwitter className="size-4" />
-            </button>
-            <button className="flex gap-2 font-semibold items-center px-3 bg-blue-800 hover:bg-blue-700">
-              <FaLinkedinIn className="size-4" />
-            </button>
-            <button className="flex gap-2 font-semibold items-center px-3 bg-blue-800 hover:bg-blue-700">
-              <FaYoutube className="size-4" />
-            </button>
-          </div>
-        </div>
-      </div> */}
-      {/* Header */}
-      <header className="sticky top-0 left-0 right-0 z-50 bg-white shadow-md">
-        <div className="container">
-          <div className="flex items-center justify-between h-20">
-            <div className="flex items-center space-x-2">
-              <Image
-                src="/images/logo.png"
-                alt="logo"
-                width={200}
-                height={156}
-              />
-              <nav>
-                <ul className="flex space-x-8">
-                  <li>
-                    <a href="#home" className="text-black hover:text-black/80">
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#about" className="text-black hover:text-black/80">
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#category"
-                      className="text-black hover:text-black/80"
-                    >
-                      Category
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#products"
-                      className="text-black hover:text-black/80"
-                    >
-                      Products
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#contact"
-                      className="text-black hover:text-black/80"
-                    >
-                      Contact
-                    </a>
-                  </li>
-                </ul>
-              </nav>  
+    <header className="sticky top-0 left-0 right-0 z-50 bg-white shadow-md">
+      <div className="container">
+        <div className="flex items-center justify-between h-20">
+          <div className="flex items-center gap-10">
+            <Image src="/images/logo.png" alt="logo" width={200} height={156} />
+
+            <div className="px-8 flex gap-8 border-l-2">
+              <div className="flex gap-5 items-center">
+                <div className="p-2 bg-blue-500/10 rounded-full">
+                  <PhoneCall className="size-6 text-blue-500" />
+                </div>
+                <div className="block">
+                  <span className="text-sm font-semibold text-blue-500">
+                    Call us
+                  </span>
+                  <p className="font-semibold">+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div className="flex gap-5 items-center">
+                <div className="p-2 bg-blue-500/10 rounded-full">
+                  <Mail className="size-6 text-blue-500" />
+                </div>
+                <div className="block">
+                  <span className="text-sm font-semibold text-blue-500">
+                    Email
+                  </span>
+                  <p className="font-semibold">info@medzonepharmagroup.com</p>
+                </div>
+              </div>
             </div>
-            <nav>
-              <ul className="flex space-x-8">
-                <li>
-                  <a href="#home" className="text-black hover:text-black/80">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="#about" className="text-black hover:text-black/80">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#category"
-                    className="text-black hover:text-black/80"
-                  >
-                    Category
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#products"
-                    className="text-black hover:text-black/80"
-                  >
-                    Products
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="text-black hover:text-black/80">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </nav>
+          </div>
+
+          <Button size={"lg"} className="font-semibold">
+            Contact us
+          </Button>
+        </div>
+
+        {/* Header */}
+      </div>
+      <div className="w-full text-white bg-blue-500">
+        <div className="container flex justify-between">
+          <nav>
+            <ul className="flex space-x-14">
+              <li>
+                <Link
+                  href="#about"
+                  className="text-white py-2 pt-3 hover:border-white border-b-4 border-transparent flex hover:text-white/80 font-semibold"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#category"
+                  className="text-white py-2 pt-3 hover:border-white border-b-4 border-transparent flex hover:text-white/80 font-semibold"
+                >
+                  Category
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#products"
+                  className="text-white py-2 pt-3 hover:border-white border-b-4 border-transparent flex hover:text-white/80 font-semibold"
+                >
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#contact"
+                  className="text-white py-2 pt-3 hover:border-white border-b-4 border-transparent flex hover:text-white/80 font-semibold"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <div className="flex">
+            <Link
+              href="/about"
+              className="flex px-4 items-center h-full hover:bg-neutral-200/20"
+            >
+              <FaFacebookF className="size-5" />
+            </Link>
+            <Link
+              href="/about"
+              className="flex px-4 items-center h-full hover:bg-neutral-200/20"
+            >
+              <FaXTwitter className="size-5" />
+            </Link>
+            <Link
+              href="/about"
+              className="flex px-4 items-center h-full hover:bg-neutral-200/20"
+            >
+              <FaLinkedinIn className="size-5" />
+            </Link>
+            <Link
+              href="/about"
+              className="flex px-4 items-center h-full hover:bg-neutral-200/20"
+            >
+              <FaYoutube className="size-5" />
+            </Link>
           </div>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 };
 

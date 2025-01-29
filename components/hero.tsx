@@ -20,7 +20,7 @@ const Hero = () => {
         autoplay={{ delay: 5000 }}
         speed={1000}
         loop
-        className="h-[calc(100vh-80px)]"
+        className="h-[calc(100vh-128px)]"
         onSlideChange={() => setSlideCount((prev) => prev + 1)}
       >
         {[
@@ -45,8 +45,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-black/40" />
               <div
                 className={cn(
-                  "absolute inset-0 flex items-center justify-start text-left container",
-                  (index + 1) % 2 === 0 && "justify-end text-right"
+                  "absolute inset-0 flex items-center justify-center text-center container"
                 )}
               >
                 <SlideContent
@@ -88,8 +87,8 @@ function SlideContent({
       initial="initial"
       animate="animate"
       variants={slideVariants}
-      transition={{ duration: 0.8, delay: 0.6 }}
-      className="max-w-3xl space-y-4 px-4"
+      transition={{ duration: 0.5, delay: 0.5 }}
+      className="max-w-5xl space-y-4 px-4"
     >
       <motion.h1
         variants={itemVariants}
@@ -99,7 +98,7 @@ function SlideContent({
       </motion.h1>
       <motion.p
         variants={itemVariants}
-        className="text-xl text-white/90 font-openSans font-normal"
+        className="text-xl text-white mx-auto font-openSans max-w-3xl font-normal"
       >
         {slide.description}
       </motion.p>
