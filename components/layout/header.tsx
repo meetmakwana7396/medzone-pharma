@@ -17,7 +17,7 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-10">
-            <Image src="/images/logo.png" alt="logo" width={200} height={156} />
+            <Image src="/images/logo.png" alt="logo" width={200} height={156} priority />
 
             <div className="px-8 flex gap-8 border-l-2">
               <div className="flex gap-5 items-center">

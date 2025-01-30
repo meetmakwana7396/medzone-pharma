@@ -52,7 +52,7 @@ const WhoWeAre = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-4 mt-20 bg-blue-100 p-4 py-8 divide-x-2 divide-blue-800/50 shadow-lg">
+        <div className="grid grid-cols-4 mt-20 bg-blue-50 p-4 py-8 divide-x-2 divide-blue-800/50 shadow-md">
           {[
             {
               icon: BsTrophy,

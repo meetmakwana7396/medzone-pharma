@@ -11,7 +11,7 @@ const Hero = () => {
   const [slideCount, setSlideCount] = useState(0);
 
   return (
-    <section id="home" className="h-screen">
+    <section id="home">
       <Swiper
         modules={[Autoplay, EffectFade]}
         effect={"fade"}
