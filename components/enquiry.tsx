@@ -7,25 +7,25 @@ import { Button } from "./ui/button";
 
 const Enquiry = () => {
   return (
-    <section id="contact" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-[url('/images/61804.jpg')] bg-cover">
+      <div className="container">
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h2 className="text-4xl font-bold mb-6">
               We Ensure You Will Always Get The Best Result
             </h2>
-            <p className="text-gray-600">
+            <p className="text-xl">
               Experience the MedZone Pharma difference today. Whether you have
               inquiries about our products or would like to explore partnership
               opportunities, we're here to assist you.
             </p>
             <br />
-            <p className="text-gray-600 mb-8">
+            <p className="text-xl mb-8">
               Contact us to learn more about how we can support your
               pharmaceutical needs. Welcome to MedZone Pharma, your trusted
               partner in healthcare solutions.
             </p>
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <div className="flex items-center space-x-4">
                 <MapPin className="h-6 w-6 text-blue-600" />
                 <p>123 Healthcare Avenue, Medical District, NY 10001</p>
@@ -38,7 +38,7 @@ const Enquiry = () => {
                 <Mail className="h-6 w-6 text-blue-600" />
                 <p>contact@pharmacare.com</p>
               </div>
-            </div>
+            </div> */}
           </div>
           <div>
             <Card className="bg-transparent border-none shadow-none">
@@ -67,7 +67,7 @@ const Enquiry = () => {
                   placeholder="Your Message"
                   className="h-48 py-4 px-4 text-lg"
                 />
-                <Button className="!p-4 !px-8 w-auto h-auto bg-blue-600 hover:bg-blue-800 text-lg rounded-none shadow-lg">
+                <Button size={'lg'}>
                   Send Message
                 </Button>
               </form>

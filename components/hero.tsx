@@ -25,13 +25,13 @@ const Hero = () => {
       >
         {[
           {
-            image: "/images/hero1.jpg",
+            image: "/images/thermometer-with-high-temperature-pills.jpg",
             title: "Your Partner in Wellness",
             description:
               "MedZone Pharma specializes in the trading of pharmaceutical products, catering to diverse medical needs globally. We ensure the highest standards of quality and reliability, forging partnerships to deliver essential medications worldwide, fostering healthier communities through accessible healthcare solutions.",
           },
           {
-            image: "/images/hero2.jpg",
+            image: "/images/bandages-medical-tools-arrangement.jpg",
             title: "Globally Connected. Locally Invested",
             description:
               "At MedZone Pharma, we don't just see ourselves as a pharmaceutical company; we're architects of hope, designing pathways to wellness",
@@ -92,7 +92,7 @@ function SlideContent({
     >
       <motion.h1
         variants={itemVariants}
-        className="text-7xl font-bold text-white mb-4"
+        className="text-7xl font-bold text-white font-montserrat mb-4"
       >
         {slide.title}
       </motion.h1>
@@ -103,7 +103,7 @@ function SlideContent({
         {slide.description}
       </motion.p>
       <motion.div variants={itemVariants}>
-        <Button className="!p-4 !px-8 w-auto h-auto bg-blue-600 text-lg rounded-none shadow-lg">
+        <Button size={"lg"}>
           Learn More
         </Button>
       </motion.div>

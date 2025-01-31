@@ -10,12 +10,12 @@ import "swiper/css/effect-fade";
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
-  display: "swap",
+  // display: "swap",
 });
 const openSans = Open_Sans({
   subsets: ["latin"],
   variable: "--font-open-sans",
-  display: "swap",
+  // display: "swap",
 });
 
 export const metadata: Metadata = {

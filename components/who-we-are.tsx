@@ -39,13 +39,13 @@ const WhoWeAre = () => {
               comprehensive range of reliable and cost-effective solutions.
             </p>
             <div className="space-x-4">
-              <Button size={"lg"} className="font-semibold">
+              <Button size={"lg"} className="font-semibold text-md">
                 Contact us
               </Button>
               <Button
                 size={"lg"}
                 variant={"secondary"}
-                className="font-semibold"
+                className="font-semibold text-md"
               >
                 Services
               </Button>

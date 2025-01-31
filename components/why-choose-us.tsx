@@ -6,9 +6,9 @@ import { BsBuilding, BsCart2, BsGlobe, BsHeartPulse } from "react-icons/bs";
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-20 bg-neutral-100">
+    <section className="py-20 bg-blue-800">
       <div className="container">
-        <h2 className="text-4xl font-bold text-center mb-12">Why Choose Us?</h2>
+        <h2 className="text-4xl font-bold text-white text-left mb-12">Why Choose Us?</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {[
             {
@@ -38,15 +38,15 @@ const WhyChooseUs = () => {
           ].map((feature, index) => (
             <Card
               key={index}
-              className="p-10 text-left justify-between shadow"
+              className="py-10 text-left bg-transparent justify-between text-white border-none"
             >
               <div className="h-full flex flex-col gap-4">
                 <div>
-                  <feature.icon className="w-12 h-12 text-blue-800" />
+                  <feature.icon className="w-12 h-12" />
                 </div>
                 <div className="flex flex-col gap-4">
                   <h3 className="text-2xl font-semibold">{feature.title}</h3>
-                  <p className="text-gray-600 text-lg">{feature.description}</p>
+                  <p className=" text-lg">{feature.description}</p>
                 </div>
               </div>
             </Card>

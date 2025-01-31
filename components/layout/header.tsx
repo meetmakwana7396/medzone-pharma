@@ -52,7 +52,7 @@ const Header = () => {
 
         {/* Header */}
       </div>
-      <div className="w-full text-white bg-blue-500">
+      <div className="w-full text-white bg-blue-800">
         <div className="container flex justify-between">
           <nav>
             <ul className="flex space-x-14">
