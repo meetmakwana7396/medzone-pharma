@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Montserrat, Open_Sans } from "next/font/google";
+import { Montserrat, Open_Sans, Outfit } from "next/font/google";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -10,12 +10,18 @@ import "swiper/css/effect-fade";
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
-  // display: "swap",
+  display: "swap",
 });
 const openSans = Open_Sans({
   subsets: ["latin"],
   variable: "--font-open-sans",
   // display: "swap",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -30,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(montserrat.className, openSans.variable)}>
+      <body className={cn(montserrat.variable, openSans.className, outfit.variable)}>
         {children}
       </body>
     </html>

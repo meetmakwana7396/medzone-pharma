@@ -42,7 +42,7 @@ const Hero = () => {
               className="relative h-full w-full bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
-              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 bg-black/20" />
               <div
                 className={cn(
                   "absolute inset-0 flex items-center justify-center text-center container"
@@ -92,13 +92,13 @@ function SlideContent({
     >
       <motion.h1
         variants={itemVariants}
-        className="text-7xl font-bold text-white font-montserrat mb-4"
+        className="text-7xl font-bold text-white mb-4"
       >
         {slide.title}
       </motion.h1>
       <motion.p
         variants={itemVariants}
-        className="text-xl text-white mx-auto font-openSans max-w-3xl font-normal"
+        className="text-xl text-white mx-auto max-w-3xl font-normal"
       >
         {slide.description}
       </motion.p>

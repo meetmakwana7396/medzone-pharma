@@ -10,6 +10,7 @@ import { Mail, Phone, PhoneCall } from "lucide-react";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import Link from "next/link";
+import Logo from "../custom/logo";
 
 const Header = () => {
   return (
@@ -17,7 +18,7 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-10">
-            <Image src="/images/logo.png" alt="logo" width={200} height={156} priority />
+            <Logo />
 
             <div className="px-8 flex gap-8 border-l-2">
               <div className="flex gap-5 items-center">
