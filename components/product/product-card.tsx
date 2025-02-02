@@ -22,11 +22,8 @@ import { Input } from "../ui/input";
 
 export default function ProductCard({ item }: { item: any }) {
   return (
-    <div>
-      <Link
-        href={`/products/${item}`}
-        className="block overflow-hidden shadow p-4 bg-white"
-      >
+    <div className="block overflow-hidden shadow p-4 bg-white hover:shadow-lg">
+      <Link href={`/products/${item}`}>
         <div className="relative aspect-square transition-all">
           <Image
             src="/images/medicin.avif"
@@ -44,33 +41,36 @@ export default function ProductCard({ item }: { item: any }) {
                   height={400}
                 /> */}
         </div>
+      </Link>
 
-        <div className="relative pt-4">
+      <div className="relative pt-4">
+        <Link href={`/products/${item}`} className="hover:underline">
           <h3 className="text-sm text-gray-700 group-hover:underline group-hover:underline-offset-4">
             Nutrisrot Liver Nava-DS Syrup for Liver Detox Sugar Free
           </h3>
-          <p className="text-xs text-neutral-400 mt-2">
-            bottle of 225 ml Syrup
-          </p>
-          <button className="text-xs hover:underline font-semibold text-blue-500">
-            Cipla
-          </button>
+        </Link>
+        <p className="text-xs text-neutral-400 mt-2">bottle of 225 ml Syrup</p>
+        <button className="text-xs hover:underline font-semibold text-blue-500">
+          Cipla
+        </button>
 
-          <div className="mt-1.5 flex items-center justify-between text-gray-900">
-            <p className="tracking-wide">$20-24</p>
+        <div className="mt-1.5 flex items-center justify-between text-gray-900">
+          <p className="tracking-wide">$20-24</p>
 
-            {/* <p className="text-xs uppercase tracking-wide">6 Colors</p> */}
-            <Dialog>
-              <DialogTrigger className="text-green-500 font-semibold text-sm hover:text-green-600 hover:underline">
-                Inquiry
-              </DialogTrigger>
-              <DialogContent>
-                <EnquiryForm />
-              </DialogContent>
-            </Dialog>
-          </div>
+          {/* <p className="text-xs uppercase tracking-wide">6 Colors</p> */}
+          <Dialog>
+            <DialogTrigger
+              className="text-green-500 font-semibold text-sm hover:text-green-600 hover:underline"
+              asChild
+            >
+              <button onClick={(e) => e.stopPropagation()}>Inquiry</button>
+            </DialogTrigger>
+            <DialogContent>
+              <EnquiryForm />
+            </DialogContent>
+          </Dialog>
         </div>
-      </Link>
+      </div>
     </div>
   );
 }
