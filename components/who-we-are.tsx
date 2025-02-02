@@ -1,17 +1,9 @@
-import { HeartPulse, Microscope, ShieldCheck, Trophy } from "lucide-react";
 import CountUp from "react-countup";
 import React from "react";
-import {
-  BsAirplane,
-  BsBox2,
-  BsCashCoin,
-  BsGlobe,
-  BsHeadphones,
-  BsPeople,
-  BsTrophy,
-} from "react-icons/bs";
+import { BsBox2, BsGlobe, BsPeople, BsTrophy } from "react-icons/bs";
 import "@/components/custom/feature-hover-card.css";
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 const WhoWeAre = () => {
   return (
@@ -19,7 +11,13 @@ const WhoWeAre = () => {
       <div className="container ">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div className="relative">
-            <img src="/images/who-we-are.jpg" alt="Laboratory" />
+            <Image
+              src="/images/who-we-are.jpg"
+              alt="Laboratory"
+              width={600}
+              height={400}
+              className="h-auto w-auto"
+            />
             {/* <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-lg">
               <p className="text-4xl font-bold">25+</p>
               <p>Years of Excellence</p>
