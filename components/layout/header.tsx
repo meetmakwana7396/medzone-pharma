@@ -75,7 +75,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  href="#products"
+                  href="/products"
                   className="text-white py-2 pt-3 hover:border-white border-b-4 border-transparent flex hover:text-white/80 font-semibold"
                 >
                   Products

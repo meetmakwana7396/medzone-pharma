@@ -94,18 +94,18 @@ const Footer = () => {
                 <h3 className="text-lg font-semibold mb-4 text-white">
                   Quick Links
                 </h3>
-                <ul className="space-y-2">
+                <ul className="space-y-2 list-star ps-5">
                   <li>
-                    <a href="#home">Home</a>
+                    <Link className="link" href="#home">Home</Link>
                   </li>
                   <li>
-                    <a href="#about">About Us</a>
+                    <Link className="link" href="#about">About Us</Link>
                   </li>
                   <li>
-                    <a href="#services">Services</a>
+                    <Link className="link" href="#services">Services</Link>
                   </li>
                   <li>
-                    <a href="#contact">Contact</a>
+                    <Link className="link" href="#contact">Contact</Link>
                   </li>
                 </ul>
               </div>
@@ -113,11 +113,19 @@ const Footer = () => {
                 <h3 className="text-lg font-semibold mb-4 text-white">
                   Services
                 </h3>
-                <ul className="space-y-2">
-                  <li className="">Research & Development</li>
-                  <li className="">Clinical Trials</li>
-                  <li className="">Quality Control</li>
-                  <li className="">Healthcare Consulting</li>
+                <ul className="space-y-2 list-star ps-5">
+                  <li>
+                    <Link className="link" href="#">Research & Development</Link>
+                  </li>
+                  <li>
+                    <Link className="link" href="#">Clinical Trials</Link>
+                  </li>
+                  <li>
+                    <Link className="link" href="#">Quality Control</Link>
+                  </li>
+                  <li>
+                    <Link className="link" href="#">Healthcare Consulting</Link>
+                  </li>
                 </ul>
               </div>
               <div className="max-w-sm">
@@ -132,7 +140,7 @@ const Footer = () => {
                     placeholder="Enter your email"
                     className="bg-white/10 border-none placeholder:text-white"
                   />
-                  <Button className="bg-black">Subscribe</Button>
+                  <Button className="bg-neutral-300 text-black hover:bg-white">Subscribe</Button>
                 </div>
               </div>
             </div>

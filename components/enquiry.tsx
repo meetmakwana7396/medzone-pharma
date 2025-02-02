@@ -16,7 +16,7 @@ const Enquiry = () => {
               "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;",
           }}
         >
-          <div className="border relative bg-[url('/images/hero2.jpg')] text-white bg-cover">
+          <div className="relative bg-[url('/images/hero2.jpg')] text-white bg-cover">
             <div className="inset-0 absolute h-full w-full bg-black/50 z-0" />
             <div className="z-10 absolute inset-0 h-full p-12">
               <h2 className="text-4xl font-bold mb-6">

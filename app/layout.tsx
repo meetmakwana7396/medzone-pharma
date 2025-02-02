@@ -6,6 +6,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import Header from "@/components/layout/header";
+import Footer from "@/components/footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -36,8 +38,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(montserrat.variable, openSans.className, outfit.variable)}>
+      <body
+        className={cn(montserrat.variable, openSans.className, outfit.variable)}
+      >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

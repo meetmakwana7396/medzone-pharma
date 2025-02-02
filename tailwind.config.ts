@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      listStyleType: {
+        star: '"✱  "',  // or '\2731'
+      },
       container: {
         padding: "10rem",
         center: true,
