@@ -1,18 +1,64 @@
 import React from "react";
-import Image from "next/image";
 import {
   FaFacebookF,
   FaLinkedinIn,
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
-import { Mail, Phone, PhoneCall } from "lucide-react";
+import { ChevronDown, Mail, PhoneCall } from "lucide-react";
 import { Button } from "../ui/button";
-import { Separator } from "../ui/separator";
 import Link from "next/link";
 import Logo from "../custom/logo";
 
 const Header = () => {
+  const categories = [
+    {
+      name: "Injectable",
+      items: [
+        "Antibiotics",
+        "Hormones",
+        "Vaccines",
+        "Anesthetics",
+        "Pain medications",
+        "Cancer treatments",
+        "Blood thinners",
+        "Immunosuppressants",
+        "Cardiovascular drugs",
+        "Emergency medications",
+      ],
+    },
+    {
+      name: "Oral",
+      items: [
+        "Antibiotics",
+        "Pain relievers",
+        "Antidepressants",
+        "Diabetes medications",
+        "Heart medications",
+        "Vitamins/supplements",
+        "Allergy medications",
+        "Gastrointestinal drugs",
+        "Blood pressure medications",
+        "Psychiatric medications",
+      ],
+    },
+    {
+      name: "Topical",
+      items: [
+        "Antibacterial creams",
+        "Steroid creams",
+        "Pain relief gels",
+        "Antifungal treatments",
+        "Acne medications",
+        "Wound healing ointments",
+        "Psoriasis treatments",
+        "Burn/skin repair creams",
+        "Hormone replacement creams",
+        "Insect bite/rash treatments",
+      ],
+    },
+  ];
+
   return (
     <header className="sticky top-0 left-0 right-0 z-50 bg-white shadow-md">
       <div className="container">
@@ -53,43 +99,50 @@ const Header = () => {
 
         {/* Header */}
       </div>
-      <div className="w-full text-white bg-blue-800">
-        <div className="container flex justify-between">
-          <nav>
-            <ul className="flex space-x-14">
-              <li>
-                <Link
-                  href="#about"
-                  className="text-white py-2 pt-3 hover:border-white border-b-4 border-transparent flex hover:text-white/80 font-semibold"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#category"
-                  className="text-white py-2 pt-3 hover:border-white border-b-4 border-transparent flex hover:text-white/80 font-semibold"
-                >
-                  Category
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products"
-                  className="text-white py-2 pt-3 hover:border-white border-b-4 border-transparent flex hover:text-white/80 font-semibold"
-                >
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#contact"
-                  className="text-white py-2 pt-3 hover:border-white border-b-4 border-transparent flex hover:text-white/80 font-semibold"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
+      <div className="w-full text-white bg-blue-800 h-12">
+        <div className="container flex justify-between h-full">
+          <nav className="flex gap-2 items-center h-full">
+            <Link
+              href="/"
+              className="font-semibold h-full px-4 flex items-center hover:bg-neutral-200/20"
+            >
+              About
+            </Link>
+            <Link
+              href="/"
+              className="font-semibold h-full px-4 flex items-center hover:bg-neutral-200/20"
+            >
+              Products
+            </Link>
+            {categories?.map((category) => (
+              <div
+                className="h-full group px-4 flex items-center relative hover:bg-neutral-200/20 font-semibold"
+                role="button"
+              >
+                <div className="flex gap-2 items-center">
+                  {category.name} <ChevronDown className="w-4 h-4" />
+                </div>
+                <div className="group-hover:block hidden text-black bg-white border absolute top-full left-0 z-10 shadow shadow-white">
+                  <div className="flex flex-col ">
+                    {category.items?.map((item) => (
+                      <Link
+                        href={"#"}
+                        className="hover:font-semibold whitespace-nowrap hover:underline hover:text-blue-500 text-sm p-2"
+                      >
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            <Link
+              href="/"
+              className="font-semibold h-full px-4 flex items-center hover:bg-neutral-200/20"
+            >
+              Contact
+            </Link>
           </nav>
           <div className="flex">
             <Link
