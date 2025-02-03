@@ -1,16 +1,20 @@
 "use client";
-import { EnquiryForm } from "@/components/product/product-card";
+import ProductCard, { EnquiryForm } from "@/components/product/product-card";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 export default function ProductDetailPage() {
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
   const router = useRouter();
-  
+
   const composition = [
     {
       compostion_name: "Vitamin D3",
@@ -152,7 +156,7 @@ export default function ProductDetailPage() {
               <DialogTrigger asChild>
                 <Button className="w-full">SEND INQUIRY</Button>
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent width="1000px">
                 <EnquiryForm />
               </DialogContent>
             </Dialog>
@@ -223,6 +227,54 @@ export default function ProductDetailPage() {
             </div>
           </div>
         </Card>
+
+        <section className="space-y-6 my-10 relative">
+          <h2 className="font-semibold text-4xl">Similar Products</h2>
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation={{
+              prevEl: navigationPrevRef.current,
+              nextEl: navigationNextRef.current,
+            }}
+            pagination={{ clickable: true }}
+            // autoplay={{
+            //   delay: 3000,
+            //   disableOnInteraction: false,
+            // }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 3,
+              },
+              1024: {
+                slidesPerView: 4,
+              },
+            }}
+            className="px-4 py-8 relative"
+          >
+            {Array.from(Array(8).keys()).map((item) => (
+              <SwiperSlide key={item}>
+                <ProductCard item={item} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <button
+            ref={navigationPrevRef}
+            className="absolute -left-6 top-1/2 disabled:opacity-50 -translate-y-1/2 z-10 bg-blue-900 p-3 rounded-full shadow-md transition-opacity duration-300"
+          >
+            <ChevronLeft className="w-6 h-6 text-white" />
+          </button>
+          <button
+            ref={navigationNextRef}
+            className="absolute -right-6 disabled:opacity-50 top-1/2 -translate-y-1/2 z-10 bg-blue-900 p-3 rounded-full shadow-md transition-opacity duration-300"
+          >
+            <ChevronRight className="w-6 h-6 text-white" />
+          </button>
+        </section>
 
         {/* Similar Products */}
         {/* {similarProducts.length > 0 && (

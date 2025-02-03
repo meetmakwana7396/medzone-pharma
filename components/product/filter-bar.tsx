@@ -6,7 +6,7 @@ import { Checkbox } from "../ui/checkbox";
 
 export default function FilterBar() {
   return (
-    <div className="w-80 bg-white p-4 space-y-8">
+    <div className="w-80 bg-white p-4 space-y-8 h-fit shadow">
       <div>
         <h1 className="font-bold uppercase">Categories</h1>
         <ul className="space-y-1">

@@ -5,6 +5,8 @@ import {
   Dialog,
   DialogContent,
   DialogFooter,
+  DialogHeader,
+  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import {
@@ -19,6 +21,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
+import { MessagesSquare } from "lucide-react";
 
 export default function ProductCard({ item }: { item: any }) {
   return (
@@ -60,12 +63,18 @@ export default function ProductCard({ item }: { item: any }) {
           {/* <p className="text-xs uppercase tracking-wide">6 Colors</p> */}
           <Dialog>
             <DialogTrigger
-              className="text-green-500 font-semibold text-sm hover:text-green-600 hover:underline"
+              className="text-green-500 font-semibold text-sm "
               asChild
             >
-              <button onClick={(e) => e.stopPropagation()}>Inquiry</button>
+              <button
+                onClick={(e) => e.stopPropagation()}
+                className="flex hover:text-green-600 items-center gap-2"
+              >
+                <MessagesSquare className="h-4 w-4" />
+                Inquiry
+              </button>
             </DialogTrigger>
-            <DialogContent>
+            <DialogContent width="1000px" className="">
               <EnquiryForm />
             </DialogContent>
           </Dialog>
@@ -78,78 +87,80 @@ export default function ProductCard({ item }: { item: any }) {
 export function EnquiryForm() {
   return (
     <form className="space-y-4">
-      <div className="relative">
-        <Image
-          src="/images/medicin.avif"
-          alt=""
-          className="aspect-square h-auto mx-auto w-[200px] object-cover opacity-100 transition-all" //group-hover:opacity-0
-          width={600}
-          height={400}
-        />
-      </div>
-      <div className="grid sm:grid-cols-2 gap-4">
-        <div className="space-y-2 col-span-2">
-          <Label htmlFor="quantity">Required Quantity*</Label>
-          <Input
-            id="quantity"
-            name="quantity"
-            type="number"
-            placeholder="Enter quantity"
-            required
-            min="1"
+      <div className="flex gap-8">
+        <div className="relative">
+          <Image
+            src="/images/medicin.avif"
+            alt=""
+            className="aspect-square h-[360px] mx-auto w-auto object-cover opacity-100 transition-all" //group-hover:opacity-0
+            width={600}
+            height={400}
           />
         </div>
+        <div className="grid sm:grid-cols-2 gap-4 grow-1 w-full max-w-lg">
+          <div className="space-y-2 col-span-2">
+            <Label htmlFor="quantity">Required Quantity*</Label>
+            <Input
+              id="quantity"
+              name="quantity"
+              type="number"
+              placeholder="Enter quantity"
+              required
+              min="1"
+            />
+          </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="customerName">Your Name*</Label>
-          <Input
-            id="customerName"
-            name="customerName"
-            placeholder="Enter your full name"
-            required
-          />
-        </div>
+          <div className="space-y-2">
+            <Label htmlFor="customerName">Your Name*</Label>
+            <Input
+              id="customerName"
+              name="customerName"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="companyName">Company Name*</Label>
-          <Input
-            id="companyName"
-            name="companyName"
-            placeholder="Enter your company name"
-            required
-          />
-        </div>
+          <div className="space-y-2">
+            <Label htmlFor="companyName">Company Name*</Label>
+            <Input
+              id="companyName"
+              name="companyName"
+              placeholder="Enter your company name"
+              required
+            />
+          </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="contactNumber">Contact Number*</Label>
-          <Input
-            id="contactNumber"
-            name="contactNumber"
-            type="tel"
-            placeholder="Enter your contact number"
-            required
-          />
-        </div>
+          <div className="space-y-2">
+            <Label htmlFor="contactNumber">Contact Number*</Label>
+            <Input
+              id="contactNumber"
+              name="contactNumber"
+              type="tel"
+              placeholder="Enter your contact number"
+              required
+            />
+          </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="email">Email Address*</Label>
-          <Input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Enter your email address"
-            required
-          />
-        </div>
+          <div className="space-y-2">
+            <Label htmlFor="email">Email Address*</Label>
+            <Input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
 
-        <div className="space-y-2 col-span-2">
-          <Label htmlFor="message">Additional Message</Label>
-          <Textarea
-            id="message"
-            name="message"
-            placeholder="Any specific requirements or questions?"
-            className="h-20"
-          />
+          <div className="space-y-2 col-span-2">
+            <Label htmlFor="message">Additional Message</Label>
+            <Textarea
+              id="message"
+              name="message"
+              placeholder="Any specific requirements or questions?"
+              className="h-20"
+            />
+          </div>
         </div>
       </div>
 
