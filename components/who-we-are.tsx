@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const WhoWeAre = () => {
   return (
-    <section id="about" className="py-20">
+    <section id="about" className="py-20 scroll-mt-[100px]">
       <div className="container ">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div className="relative">

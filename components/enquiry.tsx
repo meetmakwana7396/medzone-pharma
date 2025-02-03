@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 
 const Enquiry = () => {
   return (
-    <section id="contact" className="py-20 bg-neutral-100">
+    <section id="contact" className="py-20 bg-neutral-100 scroll-mt-[100px]">
       <div className="container">
         <div
           className="grid md:grid-cols-2 overflow-hidden rounded-xl bg-white shadow-lg"

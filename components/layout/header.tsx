@@ -103,13 +103,13 @@ const Header = () => {
         <div className="container flex justify-between h-full">
           <nav className="flex gap-2 items-center h-full">
             <Link
-              href="/"
+              href="/#about"
               className="font-semibold h-full px-4 flex items-center hover:bg-neutral-200/20"
             >
               About
             </Link>
             <Link
-              href="/"
+              href="/products"
               className="font-semibold h-full px-4 flex items-center hover:bg-neutral-200/20"
             >
               Products
@@ -138,7 +138,7 @@ const Header = () => {
             ))}
 
             <Link
-              href="/"
+              href="/#contact"
               className="font-semibold h-full px-4 flex items-center hover:bg-neutral-200/20"
             >
               Contact
